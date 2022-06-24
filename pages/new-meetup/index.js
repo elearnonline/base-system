@@ -4,6 +4,7 @@ import Head from 'next/head';
 import { useRouter } from 'next/router';
 
 import NewMeetupForm from '../../components/meetups/NewMeetupForm';
+import {  withPageAuthRequired } from '@auth0/nextjs-auth0';
 
 function NewMeetupPage() {
   const router = useRouter();
@@ -39,3 +40,5 @@ function NewMeetupPage() {
 }
 
 export default NewMeetupPage;
+
+export const getServerSideProps = withPageAuthRequired();

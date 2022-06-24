@@ -1,5 +1,4 @@
 import { MongoClient } from 'mongodb';
-import {  withPageAuthRequired } from '@auth0/nextjs-auth0';
 
 // /api/new-meetup
 // POST /api/new-meetup
@@ -27,4 +26,3 @@ async function handler(req, res) {
 
 export default handler;
 
-export const getServerSideProps = withPageAuthRequired();
